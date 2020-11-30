@@ -37,4 +37,15 @@ Use the case statement to create a new column classifying existing columns as ei
  label should be low and if the amount is between 2 and 4,
  the label should be medium, and if it is more than 4, then it should be high."
  
-SELECT CONCAT(first_name, " ", last_name) AS full_name, email...
+SELECT CONCAT(first_name, " ", last_name) AS full_name, email,
+(SELECT * FROM category  WHERE name = 'Action') AS Category
+FROM customer d
+ORDER BY full_name;
+
+SELECT *
+FROM film;
+
+USE sakila;
+
+SELECT *
+FROM category;
